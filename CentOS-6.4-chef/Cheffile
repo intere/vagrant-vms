@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+#cookbook 'mongodb-10gen',
+#  :git =>  'https://github.com/higanworks-cookbooks/mongodb-10gen'
+
+cookbook 'setup-mongo',
+  :git => 'https://github.com/intere/setup-mongo.git'
+
+cookbook 'tomcat',
+  :git => 'git@github.com:intere/tomcat.git',
+  :ref => 'v0.15.12'
+#cookbook 'setup-tomcat',
+#  :git => 'https://github.com/intere/setup-tomcat.git'
+

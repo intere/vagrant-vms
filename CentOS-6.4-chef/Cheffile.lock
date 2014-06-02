@@ -1,0 +1,18 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    java (1.22.0)
+    openssl (1.1.0)
+
+GIT
+  remote: git@github.com:intere/tomcat.git
+  ref: v0.15.12
+  sha: 6d63b50b679dcaf8bcf7f42f1ca2d28f22b24bd6
+  specs:
+    tomcat (0.15.12)
+      java (>= 0.0.0)
+      openssl (>= 0.0.0)
+
+DEPENDENCIES
+  tomcat (>= 0)
+
