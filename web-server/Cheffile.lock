@@ -1,0 +1,34 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    chef-sugar (2.0.0)
+    iptables (0.13.2)
+    java (1.22.0)
+    logrotate (1.6.0)
+    openssl (2.0.0)
+      chef-sugar (>= 0.0.0)
+    pacman (1.1.1)
+
+GIT
+  remote: git@github.com:intere/tomcat.git
+  ref: v0.15.12
+  sha: 6d63b50b679dcaf8bcf7f42f1ca2d28f22b24bd6
+  specs:
+    tomcat (0.15.12)
+      java (>= 0.0.0)
+      openssl (>= 0.0.0)
+
+GIT
+  remote: git@github.com:onehealth-cookbooks/apache2.git
+  ref: v1.10.4
+  sha: e73f2165c6a652b29e964fd4e01c5b0a851afe19
+  specs:
+    apache2 (1.10.4)
+      iptables (>= 0.0.0)
+      logrotate (>= 0.0.0)
+      pacman (>= 0.0.0)
+
+DEPENDENCIES
+  apache2 (>= 0)
+  tomcat (>= 0)
+

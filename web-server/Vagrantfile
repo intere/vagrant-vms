@@ -1,0 +1,18 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "centos-6.4-chef"
+  config.vm.hostname = "web-server"
+  
+  config.vm.provision :chef_solo do |chef|
+    chef.cookbooks_path = [ "cookbooks" ]
+    chef.add_recipe "apache2"
+    chef.add_recipe "java"
+    chef.add_recipe "tomcat"
+  end
+
+end
