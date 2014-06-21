@@ -1,0 +1,15 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "amazon-linux"
+  config.vm.box_url = "http://images.geekandi.com/amazon-linux/vagrant-amazon-linux64-2014.03-public-virtualbox.box"
+  config.vm.hostname = "ec2-vagrant"
+
+  # I found this Amazon Linux info on the following blog page:
+  # https://www.geekandi.com/2014/04/13/amazon-linux-vagrant-box-images/
+
+end
