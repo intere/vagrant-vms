@@ -1,8 +1,11 @@
 SITE
   remote: http://community.opscode.com/api/v1
   specs:
+    iptables (0.13.2)
     java (1.22.0)
+    logrotate (1.6.0)
     openssl (1.1.0)
+    pacman (1.1.1)
 
 GIT
   remote: git@github.com:intere/tomcat.git
@@ -13,6 +16,25 @@ GIT
       java (>= 0.0.0)
       openssl (>= 0.0.0)
 
+GIT
+  remote: git@github.com:onehealth-cookbooks/apache2.git
+  ref: master
+  sha: d9e610f26636d6169365f7a6b67a66b630b6e016
+  specs:
+    apache2 (1.10.5)
+      iptables (>= 0.0.0)
+      logrotate (>= 0.0.0)
+      pacman (>= 0.0.0)
+
+GIT
+  remote: https://github.com/intere/setup-mongo.git
+  ref: master
+  sha: 77d9c5c94aa6b737204936e42aad211e33073d4e
+  specs:
+    setup-mongo (0.1.0)
+
 DEPENDENCIES
+  apache2 (>= 0)
+  setup-mongo (>= 0)
   tomcat (>= 0)
 

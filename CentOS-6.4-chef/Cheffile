@@ -15,3 +15,5 @@ cookbook 'tomcat',
 #cookbook 'setup-tomcat',
 #  :git => 'https://github.com/intere/setup-tomcat.git'
 
+cookbook 'apache2',
+  :git => 'git@github.com:onehealth-cookbooks/apache2.git'
