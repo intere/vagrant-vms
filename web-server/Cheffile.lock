@@ -20,10 +20,10 @@ GIT
 
 GIT
   remote: git@github.com:onehealth-cookbooks/apache2.git
-  ref: v1.10.4
-  sha: e73f2165c6a652b29e964fd4e01c5b0a851afe19
+  ref: v1.10.2
+  sha: 452dda5b2e7578e2286dff188bbb3d0b6b22b026
   specs:
-    apache2 (1.10.4)
+    apache2 (1.10.2)
       iptables (>= 0.0.0)
       logrotate (>= 0.0.0)
       pacman (>= 0.0.0)

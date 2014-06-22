@@ -20,5 +20,5 @@ cookbook 'tomcat',
 
 cookbook 'apache2',
   :git => 'git@github.com:onehealth-cookbooks/apache2.git',
-  :ref => 'v1.10.4'
+  :ref => 'v1.10.2'
 
