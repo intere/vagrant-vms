@@ -7,6 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Box Info
+  #config.vm.box = "lucid"
   config.vm.box = "centos-6.4-chef"
   #config.vm.box = "opscode-ubuntu-13.04-chef"
   config.vm.hostname = "web-server"
@@ -19,10 +20,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Provisioning (via Chef)
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = [ "cookbooks" ]
-    chef.add_recipe "apache2"
-    chef.add_recipe "apache2::mod_ssl"
-    chef.add_recipe "java"
-    chef.add_recipe "tomcat"
+    #chef.add_recipe "apache2"
+    #chef.add_recipe "apache2::mod_ssl"
+    #chef.add_recipe "java"
+    #chef.add_recipe "tomcat"
+    chef.add_recipe "appserver"
   end
 end
 

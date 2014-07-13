@@ -28,7 +28,16 @@ GIT
       logrotate (>= 0.0.0)
       pacman (>= 0.0.0)
 
+GIT
+  remote: https://github.com/intere/appserver.git
+  ref: master
+  sha: 5b333b83a834580302219a6d935668efd21fff94
+  specs:
+    appserver (0.1.0)
+      apache2 (>= 0.0.0)
+
 DEPENDENCIES
   apache2 (>= 0)
+  appserver (>= 0)
   tomcat (>= 0)
 

@@ -22,3 +22,6 @@ cookbook 'apache2',
   :git => 'git@github.com:onehealth-cookbooks/apache2.git',
   :ref => 'v1.10.2'
 
+cookbook 'appserver',
+  :git => 'https://github.com/intere/appserver.git'
+
