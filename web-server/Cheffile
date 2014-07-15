@@ -3,17 +3,6 @@
 
 site 'http://community.opscode.com/api/v1'
 
-# cookbook 'chef-client'
-
-# cookbook 'apache2', '>= 1.0.0'
-
-# cookbook 'rvm',
-#   :git => 'https://github.com/fnichol/chef-rvm'
-
-# cookbook 'postgresql',
-#   :git => 'https://github.com/findsyou/cookbooks',
-#   :ref => 'postgresql-improvements'
-
 cookbook 'tomcat',
   :git => 'git@github.com:intere/tomcat.git',
   :ref => 'v0.15.12'
@@ -25,3 +14,19 @@ cookbook 'apache2',
 cookbook 'appserver',
   :git => 'https://github.com/intere/appserver.git'
 
+cookbook 'mongodb',
+  :git => 'git@github.com:edelight/chef-mongodb.git',
+  :ref => '0.16.1'
+
+cookbook 'jenkins',
+  :git => 'git@github.com:opscode-cookbooks/jenkins.git',
+  :ref => 'v2.1.2'
+
+cookbook 'cpan', '~> 0.0.32'
+
+cookbook 'maven',
+  :git => 'https://github.com/opscode-cookbooks/maven.git',
+  :ref => 'v1.1.0'
+
+cookbook 'npm',
+  :git => 'https://github.com/balbeko/chef-npm.git'

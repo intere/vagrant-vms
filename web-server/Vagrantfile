@@ -7,14 +7,14 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Box Info
-  #config.vm.box = "lucid"
   config.vm.box = "centos-6.4-chef"
-  #config.vm.box = "opscode-ubuntu-13.04-chef"
   config.vm.hostname = "web-server"
 
   # Port NATs
   config.vm.network :forwarded_port, guest: 80, host: 31080
   config.vm.network :forwarded_port, guest: 443, host: 31443
+  # Temporary (debugging) NATs:
+  config.vm.network :forwarded_port, guest: 8081, host: 31081
 
 
   # Provisioning (via Chef)
