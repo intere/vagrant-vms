@@ -1,0 +1,309 @@
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'Ubuntu-Server-12.04'...
+[KProgress: 20%[KProgress: 30%[KProgress: 40%[KProgress: 50%[KProgress: 60%[KProgress: 90%[K==> default: Matching MAC address for NAT networking...
+==> default: Setting the name of the VM: Rails-Server_default_1428620502389_79454
+==> default: Fixed port collision for 22 => 2222. Now on port 2202.
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 22 => 2202 (adapter 1)
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2202
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Connection timeout. Retrying...
+    default: 
+    default: Vagrant insecure key detected. Vagrant will automatically replace
+    default: this with a newly generated keypair for better security.
+    default: 
+    default: Inserting generated public key within guest...
+    default: Removing insecure key from the guest if its present...
+    default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default: 
+    default: Guest Additions Version: 4.2.1
+    default: VirtualBox Version: 4.3
+==> default: Mounting shared folders...
+    default: /vagrant => /home/einternicola/code/vagrant/Rails-Server
+==> default: Running provisioner: shell...
+    default: Running: /tmp/vagrant-shell20150409-9309-1hrro2t.sh
+==> default: stdin: is not a tty
+==> default: /tmp/vagrant-shell: line 3: type: rvm: not found
+==> default: Information: 
+==> default: I am: root
+==> default: Groups: root
+==> default: Working Directory: /home/vagrant
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: 
+==> default: Reading state information...
+==> default: The following extra packages will be installed:
+==> default:   git-man libc-ares2 libdbd-mysql-perl libdbi-perl liberror-perl libev4
+==> default:   libhtml-template-perl libicu48 libmysqlclient18 libnet-daemon-perl
+==> default:   libplrpc-perl libv8-3.7.12.22 mysql-client-5.5 mysql-client-core-5.5
+==> default:   mysql-common mysql-server-core-5.5 zlib1g-dev
+==> default: Suggested packages:
+==> default:   git-daemon-run git-daemon-sysvinit git-doc git-el git-arch git-cvs git-svn
+==> default:   git-email git-gui gitk gitweb libipc-sharedcache-perl libterm-readkey-perl
+==> default:   tinyca mailx
+==> default: The following NEW packages will be installed:
+==> default:   git git-man libc-ares2 libdbd-mysql-perl libdbi-perl liberror-perl libev4
+==> default:   libhtml-template-perl libicu48 libmysqlclient-dev libmysqlclient18
+==> default:   libnet-daemon-perl libplrpc-perl libv8-3.7.12.22 mysql-client-5.5
+==> default:   mysql-client-core-5.5 mysql-common mysql-server-5.5 mysql-server-core-5.5
+==> default:   nodejs zlib1g-dev
+==> default: 0 upgraded, 21 newly installed, 0 to remove and 0 not upgraded.
+==> default: Need to get 45.7 MB of archives.
+==> default: After this operation, 147 MB of additional disk space will be used.
+==> default: Err http://br.archive.ubuntu.com/ubuntu/ precise-updates/main mysql-common all 5.5.24-0ubuntu0.12.04.1
+==> default:   404  Not Found
+==> default: Err http://br.archive.ubuntu.com/ubuntu/ precise-updates/main libmysqlclient18 amd64 5.5.24-0ubuntu0.12.04.1
+==> default:   404  Not Found
+==> default: Get:1 http://br.archive.ubuntu.com/ubuntu/ precise/main libnet-daemon-perl all 0.48-1 [43.1 kB]
+==> default: Get:2 http://br.archive.ubuntu.com/ubuntu/ precise/main libplrpc-perl all 0.2020-2 [36.0 kB]
+==> default: Get:3 http://br.archive.ubuntu.com/ubuntu/ precise/main libdbi-perl amd64 1.616-1build2 [849 kB]
+==> default: Get:4 http://br.archive.ubuntu.com/ubuntu/ precise/main libdbd-mysql-perl amd64 4.020-1build2 [106 kB]
+==> default: Err http://br.archive.ubuntu.com/ubuntu/ precise-updates/main mysql-client-core-5.5 amd64 5.5.24-0ubuntu0.12.04.1
+==> default:   404  Not Found
+==> default: Err http://br.archive.ubuntu.com/ubuntu/ precise-updates/main mysql-client-5.5 amd64 5.5.24-0ubuntu0.12.04.1
+==> default:   404  Not Found
+==> default: Err http://br.archive.ubuntu.com/ubuntu/ precise-updates/main mysql-server-core-5.5 amd64 5.5.24-0ubuntu0.12.04.1
+==> default:   404  Not Found
+==> default: Err http://br.archive.ubuntu.com/ubuntu/ precise-updates/main mysql-server-5.5 amd64 5.5.24-0ubuntu0.12.04.1
+==> default:   404  Not Found
+==> default: Get:5 http://br.archive.ubuntu.com/ubuntu/ precise/main libc-ares2 amd64 1.7.5-1 [36.6 kB]
+==> default: Get:6 http://br.archive.ubuntu.com/ubuntu/ precise/main liberror-perl all 0.17-1 [23.8 kB]
+==> default: Get:7 http://br.archive.ubuntu.com/ubuntu/ precise/main git-man all 1:1.7.9.5-1 [630 kB]
+==> default: Get:8 http://br.archive.ubuntu.com/ubuntu/ precise/main git amd64 1:1.7.9.5-1 [6,087 kB]
+==> default: Get:9 http://br.archive.ubuntu.com/ubuntu/ precise/main libhtml-template-perl all 2.10-1 [65.0 kB]
+==> default: Get:10 http://br.archive.ubuntu.com/ubuntu/ precise/main libicu48 amd64 4.8.1.1-3 [8,103 kB]
+==> default: Get:11 http://br.archive.ubuntu.com/ubuntu/ precise/main zlib1g-dev amd64 1:1.2.3.4.dfsg-3ubuntu4 [165 kB]
+==> default: Err http://br.archive.ubuntu.com/ubuntu/ precise-updates/main libmysqlclient-dev amd64 5.5.24-0ubuntu0.12.04.1
+==> default:   404  Not Found
+==> default: Get:12 http://br.archive.ubuntu.com/ubuntu/ precise/universe libv8-3.7.12.22 amd64 3.7.12.22-3 [1,369 kB]
+==> default: Get:13 http://br.archive.ubuntu.com/ubuntu/ precise/universe libev4 amd64 1:4.11-1 [29.0 kB]
+==> default: Get:14 http://br.archive.ubuntu.com/ubuntu/ precise/universe nodejs amd64 0.6.12~dfsg1-1ubuntu1 [664 kB]
+==> default: Failed to fetch http://br.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.5/mysql-common_5.5.24-0ubuntu0.12.04.1_all.deb  404  Not Found
+==> default: Failed to fetch http://br.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.5/libmysqlclient18_5.5.24-0ubuntu0.12.04.1_amd64.deb  404  Not Found
+==> default: Failed to fetch http://br.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.5/mysql-client-core-5.5_5.5.24-0ubuntu0.12.04.1_amd64.deb  404  Not Found
+==> default: Failed to fetch http://br.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.5/mysql-client-5.5_5.5.24-0ubuntu0.12.04.1_amd64.deb  404  Not Found
+==> default: Failed to fetch http://br.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.5/mysql-server-core-5.5_5.5.24-0ubuntu0.12.04.1_amd64.deb  404  Not Found
+==> default: Failed to fetch http://br.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.5/mysql-server-5.5_5.5.24-0ubuntu0.12.04.1_amd64.deb  404  Not Found
+==> default: Failed to fetch http://br.archive.ubuntu.com/ubuntu/pool/main/m/mysql-5.5/libmysqlclient-dev_5.5.24-0ubuntu0.12.04.1_amd64.deb  404  Not Found
+==> default: Fetched 18.2 MB in 5s (3,572 kB/s)
+==> default: E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+==> default: /tmp/vagrant-shell: line 11: mysqladmin: command not found
+==> default: Installing RVM...
+==> default: Downloading https://github.com/wayneeseguin/rvm/archive/master.tar.gz
+==> default: Creating group 'rvm'
+==> default: 
+==> default: Installing RVM to /usr/local/rvm/
+==> default: Installation of RVM in /usr/local/rvm/ is almost complete:
+==> default: 
+==> default:   * First you need to add all users that will be using rvm to 'rvm' group,
+==> default:     and logout - login again, anyone using rvm will be operating with `umask u=rwx,g=rwx,o=rx`.
+==> default: 
+==> default:   * To start using RVM you need to run `source /etc/profile.d/rvm.sh`
+==> default:     in all your open shell windows, in rare cases you need to reopen all shell windows.
+==> default: 
+==> default: # User,
+==> default: #
+==> default: #   Thank you for using RVM!
+==> default: #   We sincerely hope that RVM helps to make your life easier and more enjoyable!!!
+==> default: #
+==> default: # ~Wayne, Michal & team.
+==> default: In case of problems: [32mhttp://rvm.io/help [33mand [32mhttps://twitter.com/rvm_io
+==> default: Searching for binary rubies, this might take some time.
+==> default: Found remote file https://rvm_io.global.ssl.fastly.net/binaries/ubuntu/12.04/x86_64/ruby-2.1.5.tar.bz2
+==> default: Checking requirements for ubuntu.
+==> default: Installing requirements for ubuntu.
+==> default: [32mUpdating system[0m
+==> default: |/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|.
+==> default: [32mInstalling required packages: gawk, g++, libreadline6-dev, zlib1g-dev, libssl-dev, libyaml-dev, libsqlite3-dev, sqlite3, autoconf, libgdbm-dev, libncurses5-dev, automake, libtool, bison, pkg-config, libffi-dev[0m
+==> default: |/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\.
+==> default: Requirements installation successful.
+==> default: ruby-2.1.5 - #configure
+==> default: ruby-2.1.5 - #download
+==> default:   % Total    % Received % Xferd  Average Spe
+==> default: ed   Time    Time     Time  Curren
+==> default: t
+==> default:                                  Dload  Upload   Tota
+==> default: l   Spent    Lef
+==> default: t  Speed
+==> default:   
+==> default: 0     0    0
+==> default:      0    0     0      0      0 --:--
+==> default: :-- --
+==> default: :--:-- --:--:
+==> default: --     0
+==> default:   0 21.4M    0     0    0     0
+==> default:       0      0 --:--:-- --:--
+==> default: :-- --:--:--     0
+==> default:   1 21.4M    1  413k    0     0   312k      0  0:01:10  0:00:01  0:01:09  338k
+==> default:  14 21.4M   14 3128k    0     0  1350k      0  0:00:16  0:00:02  0:00:14 1411k
+==> default:  42 21.4M   42 
+==> default: 9405k 
+==> default:    0     0  2836k      0  0:00:07  
+==> default: 0:00:
+==> default: 03  0:00:04
+==> default:  2924k
+==> default:  78 21.4M   78 16.8M    0  
+==> default:    0  3995k     
+==> default:  0  0:00:05  0:00:04  0:00:01
+==> default:  4089k
+==> default: 100 21.4M  100 21.4M    0     0  4461k      0  0:00:04  0:00:04 --:--:-- 5482k
+==> default: ruby-2.1.5 - #validate archive
+==> default: ruby-2.1.5 - #extract
+==> default: ruby-2.1.5 - #validate binary
+==> default: ruby-2.1.5 - #setup
+==> default: ruby-2.1.5 - #gemset created /usr/local/rvm/gems/ruby-2.1.5@global
+==> default: [32mruby-2.1.5 - #importing gemset /usr/local/rvm/gemsets/global.gems[0m
+==> default: |/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|.
+==> default: [32mruby-2.1.5 - #generating global wrappers[0m
+==> default: |/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-.
+==> default: ruby-2.1.5 - #gemset created /usr/local/rvm/gems/ruby-2.1.5
+==> default: ruby-2.1.5 - #importing gemsetfile /usr/local/rvm/gemsets/default.gems evaluated to empty gem list
+==> default: [32mruby-2.1.5 - #generating default wrappers[0m
+==> default: |/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\|/-.|/-\|/-\|.-\|/-\.
+==> default: Successfully installed thread_safe-0.3.5
+==> default: Successfully installed minitest-5.5.1
+==> default: Successfully installed tzinfo-1.2.2
+==> default: Successfully installed i18n-0.7.0
+==> default: Successfully installed activesupport-4.2.1
+==> default: Successfully installed rails-deprecated_sanitizer-1.0.3
+==> default: Successfully installed mini_portile-0.6.2
+==> default: Building native extensions.  This could take a while...
+==> default: Successfully installed nokogiri-1.6.6.2
+==> default: Successfully installed rails-dom-testing-1.0.6
+==> default: Successfully installed loofah-2.0.1
+==> default: Successfully installed rails-html-sanitizer-1.0.2
+==> default: Successfully installed erubis-2.7.0
+==> default: Successfully installed builder-3.2.2
+==> default: Successfully installed actionview-4.2.1
+==> default: Successfully installed rack-1.6.0
+==> default: Successfully installed rack-test-0.6.3
+==> default: Successfully installed actionpack-4.2.1
+==> default: Successfully installed tilt-1.4.1
+==> default: Successfully installed multi_json-1.11.0
+==> default: Successfully installed hike-1.2.3
+==> default: Successfully installed sprockets-2.12.3
+==> default: Successfully installed sprockets-rails-2.2.4
+==> default: Successfully installed thor-0.19.1
+==> default: Successfully installed railties-4.2.1
+==> default: Successfully installed globalid-0.3.5
+==> default: Successfully installed activejob-4.2.1
+==> default: Successfully installed mime-types-2.4.3
+==> default: Successfully installed mail-2.6.3
+==> default: Successfully installed actionmailer-4.2.1
+==> default: Successfully installed arel-6.0.0
+==> default: Successfully installed activemodel-4.2.1
+==> default: Successfully installed activerecord-4.2.1
+==> default: Successfully installed rails-4.2.1
+==> default: Successfully installed bundler-1.9.2
+==> default: 34 gems installed
+==> default: -su: git: command not found
+==> default: Working in directory: /home/vagrant/code
+==> default: /usr/local/rvm/scripts/extras/bash_zsh_support/chpwd/function.sh: line 5: cd: /home/vagrant/code/on-weed: No such file or directory
+==> default: Building native extensions.  This could take a while...
+==> default: ERROR:  Error installing mysql2:
+==> default: 	ERROR: Failed to build gem native extension.
+==> default: 
+==> default:     /usr/local/rvm/rubies/ruby-2.1.5/bin/ruby -r ./siteconf20150409-3366-zf7ltj.rb extconf.rb
+==> default: checking for ruby/thread.h... yes
+==> default: checking for rb_thread_call_without_gvl() in ruby/thread.h... yes
+==> default: checking for rb_thread_blocking_region()... yes
+==> default: checking for rb_wait_for_single_fd()... yes
+==> default: checking for rb_hash_dup()... yes
+==> default: checking for rb_intern3()... yes
+==> default: checking for mysql_query() in -lmysqlclient... no
+==> default: checking for main() in -lm... yes
+==> default: checking for mysql_query() in -lmysqlclient... no
+==> default: checking for main() in -lz... yes
+==> default: checking for mysql_query() in -lmysqlclient... no
+==> default: checking for main() in -lsocket... no
+==> default: checking for mysql_query() in -lmysqlclient... no
+==> default: checking for main() in -lnsl... yes
+==> default: checking for mysql_query() in -lmysqlclient... no
+==> default: checking for main() in -lmygcc... no
+==> default: checking for mysql_query() in -lmysqlclient... no
+==> default: *** extconf.rb failed ***
+==> default: Could not create Makefile due to some reason, probably lack of necessary
+==> default: libraries and/or headers.  Check the mkmf.log file for more details.  You may
+==> default: need configuration options.
+==> default: 
+==> default: Provided configuration options:
+==> default: 	--with-opt-dir
+==> default: 	--without-opt-dir
+==> default: 	--with-opt-include
+==> default: 	--without-opt-include=${opt-dir}/include
+==> default: 	--with-opt-lib
+==> default: 	--without-opt-lib=${opt-dir}/lib
+==> default: 	--with-make-prog
+==> default: 	--without-make-prog
+==> default: 	--srcdir=.
+==> default: 	--curdir
+==> default: 	--ruby=/usr/local/rvm/rubies/ruby-2.1.5/bin/ruby
+==> default: 	--with-mysql-dir
+==> default: 	--without-mysql-dir
+==> default: 	--with-mysql-include
+==> default: 	--without-mysql-include=${mysql-dir}/include
+==> default: 	--with-mysql-lib
+==> default: 	--without-mysql-lib=${mysql-dir}/lib
+==> default: 	--with-mysql-config
+==> default: 	--without-mysql-config
+==> default: 	--with-mysql-dir
+==> default: 	--without-mysql-dir
+==> default: 	--with-mysql-include
+==> default: 	--without-mysql-include=${mysql-dir}/include
+==> default: 	--with-mysql-lib
+==> default: 	--without-mysql-lib=${mysql-dir}/lib
+==> default: 	--with-mysqlclientlib
+==> default: 	--without-mysqlclientlib
+==> default: 	--with-mlib
+==> default: 	--without-mlib
+==> default: 	--with-mysqlclientlib
+==> default: 	--without-mysqlclientlib
+==> default: 	--with-zlib
+==> default: 	--without-zlib
+==> default: 	--with-mysqlclientlib
+==> default: 	--without-mysqlclientlib
+==> default: 	--with-socketlib
+==> default: 	--without-socketlib
+==> default: 	--with-mysqlclientlib
+==> default: 	--without-mysqlclientlib
+==> default: 	--with-nsllib
+==> default: 	--without-nsllib
+==> default: 	--with-mysqlclientlib
+==> default: 	--without-mysqlclientlib
+==> default: 	--with-mygcclib
+==> default: 	--without-mygcclib
+==> default: 	--with-mysqlclientlib
+==> default: 	--without-mysqlclientlib
+==> default: 
+==> default: extconf failed, exit code 1
+==> default: 
+==> default: Gem files will remain installed in /usr/local/rvm/gems/ruby-2.1.5/gems/mysql2-0.3.17 for inspection.
+==> default: Results logged to /usr/local/rvm/gems/ruby-2.1.5/extensions/x86_64-linux/2.1.0/mysql2-0.3.17/gem_make.out
+==> default: /usr/local/rvm/scripts/extras/bash_zsh_support/chpwd/function.sh: line 5: cd: /home/vagrant/code/on-weed: No such file or directory
+==> default: Could not locate Gemfile or .bundle/ directory
+==> default: /usr/local/rvm/scripts/extras/bash_zsh_support/chpwd/function.sh: line 5: cd: /home/vagrant/code/on-weed: No such file or directory
+==> default: Could not locate Gemfile or .bundle/ directory
+==> default: /usr/local/rvm/scripts/extras/bash_zsh_support/chpwd/function.sh: line 5: cd: /home/vagrant/code/on-weed: No such file or directory
+==> default: Could not locate Gemfile or .bundle/ directory
+==> default: /usr/local/rvm/scripts/extras/bash_zsh_support/chpwd/function.sh: line 5: cd: /home/vagrant/code/on-weed: No such file or directory
+==> default: Could not locate Gemfile or .bundle/ directory
+==> default: /usr/local/rvm/scripts/extras/bash_zsh_support/chpwd/function.sh: line 5: cd: /home/vagrant/code/on-weed: No such file or directory
+==> default: Could not locate Gemfile or .bundle/ directory
+The SSH command responded with a non-zero exit status. Vagrant
+assumes that this means the command failed. The output for this command
+should be in the log above. Please read the output to determine what
+went wrong.

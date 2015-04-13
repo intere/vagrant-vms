@@ -1,0 +1,16 @@
+127.0.0.1	localhost
+
+# Physical machines on the network:
+192.168.111.24  callisto.molkyway.net callisto
+192.168.111.25	intere.servebeer.com jupiter.milkyway.net jupiter
+192.168.111.45  proteus.milkyway.net proteus
+
+# The Printer:
+192.168.111.99	saturn.milkyway.net saturn printer
+
+# The following lines are desirable for IPv6 capable hosts
+#::1     ip6-localhost ip6-loopback
+#fe00::0 ip6-localnet
+#ff00::0 ip6-mcastprefix
+#ff02::1 ip6-allnodes
+#ff02::2 ip6-allrouters
