@@ -13,6 +13,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "centos-6.4"
   config.vm.box_url = "https://github.com/2creatives/vagrant-centos/releases/download/v6.4.2/centos64-x86_64-20140116.box"
 
-  config.vm.provision "shell", path: "provision.sh"
+  config.vm.define :chef do | chef_config |
+    chef_config.vm.provision "shell", path: "provision.sh"
+  end
 
 end

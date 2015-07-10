@@ -11,25 +11,34 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = "web-server"
 
   # Port NATs
-  config.vm.network :forwarded_port, guest: 80, host: 31080
-  config.vm.network :forwarded_port, guest: 443, host: 31443
+  config.vm.network :forwarded_port, guest: 80, host: 30080
+  config.vm.network :forwarded_port, guest: 443, host: 30443
   # Temporary (debugging) NATs:
-  config.vm.network :forwarded_port, guest: 8081, host: 31081
+  config.vm.network :forwarded_port, guest: 8080, host: 30081
 
-
-  Vagrant.configure("2") do |config|
-    config.vm.provision "shell", inline: "cp /vagrant/config/hosts /etc/hosts"
+  config.vm.define :web_server do | web_server_config |
+    web_server_config.vm.provision "shell", inline: "cp /vagrant/config/hosts /etc/hosts"
+    web_server_config.vm.provision "chef_solo" do | chef |
+      chef.cookbooks_path = [ "cookbooks" ]
+      chef.add_recipe "appserver"
+    end
+    web_server_config.vm.provision "shell", inline: "yum -y install wget"
+    web_server_config.vm.provision "shell", inline: "wget 'http://mirrors.jenkins-ci.org/war/latest/jenkins.war' -O /usr/share/tomcat6/webapps/jenkins.war"
   end
 
-
-  # Provisioning (via Chef)
-  config.vm.provision :chef_solo do |chef|
-    chef.cookbooks_path = [ "cookbooks" ]
-    #chef.add_recipe "apache2"
-    #chef.add_recipe "apache2::mod_ssl"
-    #chef.add_recipe "java"
-    #chef.add_recipe "tomcat"
-    chef.add_recipe "appserver"
-  end
+  # Vagrant.configure("2") do |config|
+  #  config.vm.provision "network", type: "shell", inline: "cp /vagrant/config/hosts /etc/hosts"
+  #
+  #  # Provisioning (via Chef)
+  #  config.vm.provision "appserver", type: 'chef_solo' do | chef |
+  #    chef.cookbooks_path = [ "cookbooks" ]
+  #    #chef.add_recipe "apache2"
+  #    #chef.add_recipe "apache2::mod_ssl"
+  #    #chef.add_recipe "java"
+  #    #chef.add_recipe "tomcat"
+  #    chef.add_recipe "appserver"
+  #  end
+  #  config.vm.provision "jenkins",  type: "shell", inline: "wget 'http://mirrors.jenkins-ci.org/war/latest/jenkins.war' /usr/share/tomcat6/webapps/"
+  #end
 end
 

@@ -18,8 +18,8 @@
 # If RVM isn't installed, then install it.
 found=$(which rvm)
 if [ "$found" == "" ] ; then
-  yum update
-  yum install curl
+  yum -y update
+  yum install -y curl
   curl -L get.rvm.io | bash -s stable
 fi
 
