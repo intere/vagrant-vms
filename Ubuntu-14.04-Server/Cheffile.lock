@@ -1,0 +1,41 @@
+SITE
+  remote: https://supermarket.getchef.com/api/v1
+  specs:
+    apt (2.7.0)
+    chef-sugar (3.1.1)
+    java (1.31.0)
+    jenkins (2.3.1)
+      apt (~> 2.0)
+      runit (~> 1.5)
+      yum (~> 3.0)
+    openssl (4.2.0)
+      chef-sugar (>= 0.0.0)
+    packagecloud (0.0.19)
+    runit (1.7.2)
+      packagecloud (>= 0.0.0)
+    yum (3.6.1)
+    yum-epel (0.6.2)
+      yum (~> 3.2)
+
+GIT
+  remote: https://github.com/intere/tomcat
+  ref: master
+  sha: 6dc030951654e86355749c5ffc0cb266309e84bd
+  specs:
+    tomcat (0.17.3)
+      java (>= 0.0.0)
+      openssl (>= 0.0.0)
+      yum-epel (>= 0.0.0)
+
+PATH
+  remote: /Users/einternicola/code/brothersmagoo-chef/cookbooks
+  specs:
+    appserver (0.0.1)
+      java (>= 0.0.0)
+      jenkins (>= 0.0.0)
+      tomcat (>= 0.0.0)
+
+DEPENDENCIES
+  appserver (>= 0)
+  tomcat (>= 0)
+
