@@ -14,6 +14,7 @@ site 'https://supermarket.getchef.com/api/v1'
 #   :git => 'https://github.com/findsyou/cookbooks',
 #   :ref => 'postgresql-improvements'
 
-cookbook 'appserver', path: '/Users/einternicola/code/brothersmagoo-chef/cookbooks'
+cookbook 'appserver', #path: '/Users/einternicola/code/brothersmagoo-chef/cookbooks'
+  :git => 'https://github.com/intere/appserver'
 cookbook 'tomcat',
   :git => 'https://github.com/intere/tomcat'

@@ -1,21 +1,44 @@
 SITE
   remote: https://supermarket.getchef.com/api/v1
   specs:
+    7-zip (1.0.2)
+      windows (>= 1.2.2)
     apt (2.7.0)
+    ark (0.9.0)
+      7-zip (>= 0.0.0)
+      windows (>= 0.0.0)
     chef-sugar (3.1.1)
+    chef_handler (1.2.0)
     java (1.31.0)
     jenkins (2.3.1)
       apt (~> 2.0)
       runit (~> 1.5)
       yum (~> 3.0)
+    maven (1.3.0)
+      ark (~> 0.4)
+      java (~> 1.13)
+      windows (>= 0.0.0)
     openssl (4.2.0)
       chef-sugar (>= 0.0.0)
     packagecloud (0.0.19)
     runit (1.7.2)
       packagecloud (>= 0.0.0)
+    windows (1.37.0)
+      chef_handler (>= 0.0.0)
     yum (3.6.1)
     yum-epel (0.6.2)
       yum (~> 3.2)
+
+GIT
+  remote: https://github.com/intere/appserver
+  ref: master
+  sha: dcbc270e55c340237450246f3834a19ef6771992
+  specs:
+    appserver (0.0.2)
+      java (>= 0.0.0)
+      jenkins (>= 0.0.0)
+      maven (>= 0.0.0)
+      tomcat (>= 0.0.0)
 
 GIT
   remote: https://github.com/intere/tomcat
@@ -26,14 +49,6 @@ GIT
       java (>= 0.0.0)
       openssl (>= 0.0.0)
       yum-epel (>= 0.0.0)
-
-PATH
-  remote: /Users/einternicola/code/brothersmagoo-chef/cookbooks
-  specs:
-    appserver (0.0.1)
-      java (>= 0.0.0)
-      jenkins (>= 0.0.0)
-      tomcat (>= 0.0.0)
 
 DEPENDENCIES
   appserver (>= 0)
